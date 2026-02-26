@@ -1,21 +1,22 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
-import { useDispatch } from "redux";
+import { useDispatch } from "react-redux";
+import { addMovie } from "./redux/MoviesSlice";
 
-import {addMovie} from '.'
 
 
 function App() {
   const [movie, setMovie] = useState();
 
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
+
 
   const handleAddMovie=()=>{
     if(!movie.trim()) return
 
-    dispatch(addMovie())
-
+dispatch(addMovie(movie))
+setMovie("")
 
 
 
