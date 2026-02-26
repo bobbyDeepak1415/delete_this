@@ -29,6 +29,9 @@ setMovie("")
       {/* <Navbar /> */}
       <input value={movie} onChange={(e) => setMovie(e.target.value)}></input>
       <button onClick={handleAddMovie}>Add</button>
+
+{}
+
     </>
   );
 }
