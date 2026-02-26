@@ -1,28 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState={
-    value:[]
-}
+const initialState = {
+  value: 0,
+};
 
+const MoviesSlice = createSlice({
+  name: "MoviesApp",
+  initialState,
+  reducers: {
+    addMovie: () => {},
+    removeMovie: () => {},
+  },
+});
 
-const MoviesSlice=createSlice({
-    name:"MoviesApp",
-    initialState,
-    reducers:{
-        addMovie:()=>{
+export const { addMovie, removeMovie } = MoviesSlice.actions;
 
-        },
-        removeMovie:()=>{
-
-        }
-    }
-
-})
-
-
-
-export const {addMovie,removeMovie}=MoviesSlice.actions
-
-
-
-export default MoviesSlice.reducer
+export default MoviesSlice.reducer;
