@@ -12,7 +12,8 @@ const CounterSlice = createSlice({
       state.value += 1;
     },
     decrement: (state) => {
-      state.value += 1;
+      if (state.value <= 0) return;
+      state.value -= 1;
     },
     addAmount: (state, action) => {
       state.value += action.payload;
