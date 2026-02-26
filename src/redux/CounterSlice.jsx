@@ -1,8 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  value: 0,
-};
+// const initialState = {
+//   value:[
+//     {id:0,name:"Starwars"},
+//     {id:1,name:"Startrek"},
+//   ]
+// };
 
 const CounterSlice = createSlice({
   name: "counter",
@@ -17,7 +20,7 @@ const CounterSlice = createSlice({
     },
     addAmount: (state, action) => {
       state.value += action.payload;
-    },...
+    },
   },
 });
 
