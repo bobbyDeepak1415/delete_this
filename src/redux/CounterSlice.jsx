@@ -17,7 +17,7 @@ const CounterSlice = createSlice({
     },
     addAmount: (state, action) => {
       state.value += action.payload;
-    },
+    },...
   },
 });
 
