@@ -13,4 +13,3 @@ const MoviesSlice = createSlice({
 export const { addMovie, removeMovie } = MoviesSlice.actions;
 
 export default MoviesSlice.reducer;
-...
