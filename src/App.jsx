@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addMovie } from "./redux/MoviesSlice";
 
 function App() {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState("");
 
   const movies = useSelector((state) => state.moviesApp.value);
 

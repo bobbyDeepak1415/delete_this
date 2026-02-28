@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { act } from "react";
 
 const initialState = {
   value: [
@@ -11,12 +12,18 @@ const MoviesSlice = createSlice({
   name: "MoviesApp",
   initialState,
   reducers: {
-    addMovie: () => {
+    addMovie: (state, action) => {
       const newMovie = {
-        id: state.value.length,
+        id: state.value.length ? state.value[state.value.length-1].id :0,
+        name:action.payload 
       };
+
+      state.value.push(newMovie)
+
     },
-    removeMovie: () => {},
+    removeMovie: (state, action) => {
+      // state.value.splice(action.payload)
+    },
   },
 });
 
