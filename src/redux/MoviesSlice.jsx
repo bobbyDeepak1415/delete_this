@@ -7,7 +7,17 @@ const initialState = {
 const MoviesSlice = createSlice({
   name: "MoviesApp",
   initialState,
-  reducers: {},
+  reducers: {
+    addMovie:()=>{
+const newMovie={
+  id:
+
+}
+    },
+    removeMovie:()=>{
+
+    }
+  },
 });
 
 export const { addMovie, removeMovie } = MoviesSlice.actions;
