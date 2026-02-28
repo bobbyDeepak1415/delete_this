@@ -4,7 +4,7 @@ import MoviesReducer from './MoviesSlice'
 
 const store=configureStore({
   reducer:{
-    mmoviesApp:MoviesReducer
+    moviesApp:MoviesReducer
   }
 })
 

@@ -16,11 +16,10 @@ const MoviesSlice = createSlice({
         id: state.value.length ? state.value[state.value.length - 1].id + 1 : 0,
         name: action.payload,
       };
-
       state.value.push(newMovie);
     },
     removeMovie: (state, action) => {
-      // state.value.splice(action.payload)
+      state.value = state.value.filter((movie) => movie.id !== action.payload);
     },
   },
 });
